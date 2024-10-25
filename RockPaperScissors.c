@@ -14,7 +14,7 @@ char * FullName(char s){
     }
     return "saisie invalide";
 }
-int gagnant(char a, char b) {
+int winner(char a, char b) {
     if (a == b) {
         printf("you choosed %s computer choosed %s\n",FullName(a),FullName(b));
         printf("tie, play again \n");
@@ -76,7 +76,7 @@ int main(void) {
         scanf(" %c", &a);
         r = rand() % 100;
         NumToLet(&b, r);
-        gagnant(a, b);
-    } while (gagnant(a, b) == -1);
+        winner(a, b);
+    } while (winner(a, b) == -1);
     return 0;
 }
