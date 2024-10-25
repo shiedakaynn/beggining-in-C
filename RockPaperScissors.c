@@ -69,14 +69,14 @@ void NumToLet(char *b, int r) {
 
 int main(void) {
     char a, b;
-    int r;
+    int r,result;
     srand(time(NULL));
     do {
         printf("player 1 choose a move : (c,p,r) \n");
         scanf(" %c", &a);
         r = rand() % 100;
         NumToLet(&b, r);
-        winner(a, b);
-    } while (winner(a, b) == -1);
+        result = winner(a, b);
+    } while (result == -1);
     return 0;
 }
